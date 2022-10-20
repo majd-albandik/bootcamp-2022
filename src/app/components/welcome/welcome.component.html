@@ -1,24 +1,25 @@
 <div>
-  <h1 class="font-bold text-32 text-primary-1">Welcome!</h1>
+  <h1 class="font-bold text-32 text-primary-1 text-center pb-8">Welcome page</h1>
   <ul class="flex flex-col gap-4">
     <li>
       <h2>1.) Get your Starter Kit</h2>
       <p>Clone the starter kit from github. Use your preferred command line with command
-        <span class="demo-code">git clone https://github.com/starterKit/bootCamp</span>
+        <span class="demo-code">git clone https://github.com/majd-albandik/bootcamp-2022</span>
       </p>
     </li>
     <li>
       <h2>2.) Start the project</h2>
       <ul class="list-disc list-inside">
         <li>Install all required dependencies <span class="demo-code">npm install</span></li>
+        <li>Install JSON Server <span class="demo-code">npm install -g json-server</span></li>
         <li>Now you can start the project <span class="demo-code">npm run start</span> (For Angular Project) and <span
-                class="demo-code">npm run server</span> for starting the backend server (Api)</li>
+                class="demo-code">npm run server</span> for starting the backend server (API)</li>
 
         <p class="my-2">
           Now you should see the project in the browser (normally under <span
-                class="demo-code">http://localhost:4000/</span> ).
+                class="demo-code">http://localhost:4200/</span> ).
           You can also access the API data in the browser under:
-          <span class="demo-code"> http://localhost:4000/models </span>
+          <span class="demo-code"> http://localhost:3000/cars </span>
         </p>
       </ul>
     </li>
@@ -26,15 +27,20 @@
       <h2>3.) Attention! To execute these exercises, you don’t need to think about any project settings and third-party
         libraries!</h2>
       <p>All what you need is preconfigured 😉. Of course, if you wish, everything is in your hands. =)</p>
+      <p>We have prepared some libraries, that you can use to customize and display your data:</p>
+      <ul class="list-disc list-inside">
+        <li><span class="demo-code">@angular/material</span> - Material Design components for Angular</li>
+        <li><span class="demo-code">tailwindcss</span> - helps rapidly to style website without leaving your HTML</li>
+      </ul>
     </li>
 
     <li>
       <h2>4.) API Endpoints:</h2>
       <ul class="list-disc list-inside demo-code">
-        <li>GET /models</li>
-        <li>GET /models/1</li>
-        <li>POST /models</li>
-        <li>DELETE /models/1</li>
+        <li>GET /car</li>
+        <li>GET /car/1</li>
+        <li>POST /car</li>
+        <li>DELETE /car/1</li>
       </ul>
     </li>
 
@@ -46,86 +52,6 @@
         <li>Main section - will be used to display content of our application</li>
       </ul>
     </li>
-
-    <h2 class="text-primary-1 text-24">Let’s start the party! 🥳</h2>
-
-    <p class="bg-primary-1">SHOULD BE EDITED</p>
-
-    <ul class="flex flex-col gap-4">
-      <li>
-        <h2>1.) Extend CarVo with missing parameters:</h2>
-        <p class="list-disc list-inside demo-code">
-          • color: string
-          • price: number
-          • …
-          • …
-          • …
-        </p>
-      </li>
-
-      <li>
-        <h2>2.) Use CarService to communicate with API and get first preconfigured cars data.</h2>
-      </li>
-      <li>
-        <h2>3.) Create CarCardComponent – will be used to show short car information on our “Cars” page.</h2>
-        <p>Content that must be shown in car card:</p>
-        <p class="list-disc list-inside demo-code">
-          • Model - model of car
-          • Year - production year
-          • Delete button – used to remove our car
-          • Details button – navigate to car details page, where will be displayed all car information.
-        </p>
-      </li>
-
-      <li>
-        <h2>4.) Display preconfigured cars with help of CarCardComponent on our “Cars” page.</h2>
-      </li>
-      <li>
-        <h2>5.) Create new Component, that will be used to create new cars and bind it to new navigation link (“Create
-          car”) in
-        </h2>
-        <p>Sidebar section</p>
-        <p>Create car form:</p>
-        <ul class="list-disc list-inside demo-code">
-          <li>Name field is required </li>
-          <li>Price field is required </li>
-          <li>Save button must be active if all fields are valid</li>
-        </ul>
-      </li>
-
-      <li>
-        <h2>6.) Consume POST endpoint to create new car.</h2>
-      </li>
-
-      <li>
-        <h2>7.) Create CarDetailsComponent to show car information. For navigation must be used our “Details” button
-          from car card.</h2>
-      </li>
-
-      <li>
-        <h2>8.) Consume DELETE endpoint to remove car from “Cars” page at click on “Delete” button of car card. </h2>
-      </li>
-      <ul>
-        <li>
-          <h2>Bonus!</h2>
-          <ul>
-            <li>
-              1.) Write the unit test of your choice.
-              every car.
-            </li>
-            <li>2.) Consume GET /allCarModels endpoint to get list of existing car models and show them on details page
-              of</li>
-            <li>3.) Consume GET filter endpoint to filter our cars on “Cars” page. </li>
-            <li>4.) Play with styles. </li>
-            <li>5.) Take a caffee =) </li>
-          </ul>
-
-        </li>
-
-      </ul>
-    </ul>
-
-
   </ul>
 
 

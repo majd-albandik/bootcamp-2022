@@ -1,0 +1,71 @@
+<div>
+  <h1 class="font-bold text-32 text-primary-1 text-center pb-8">Exercise page</h1>
+  <ul class="flex flex-col gap-4">
+    <h2 class="text-primary-1 text-24">Let’s start the party! 🥳</h2>
+
+    <ul class="flex flex-col gap-4">
+      <li>
+        <h2>1.) Use CarService to communicate with API and get first preconfigured cars data. We have already prepared an test API call <span class="demo-code"> GET /car</span>, you can see tha data in console after visiting of Exercise page.</h2>
+      </li>
+
+      <li>
+        <h2>2.) Find <span class="demo-code">app/models/car.vo.ts</span> file and prepare your Car model depends on parameters, that you will get from <span class="demo-code">http://localhost:3000/car</span> response:</h2>
+        <ul class="list-disc list-inside demo-code">
+          <li>id: number</li>
+          <li>name: string</li>
+          <li>…</li>
+          <li>…</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>3.) Create CarCardComponent – this component will be used to show short car information on our “Cars” page.</h2>
+        <p>Content that must be shown in car card:</p>
+        <ul class="list-disc list-inside demo-code">
+          <li>Model - model of car</li>
+          <li>FirstRegistration - registration date</li>
+          <li>Delete button – used to remove our car</li>
+          <li>Details button – navigate to car details page, where will be displayed all car information</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>4.) Display preconfigured cars with help of CarCardComponent on our “Cars” page.</h2>
+      </li>
+      <li>
+        <h2>5.) Create new Component, that will be used to create new cars and bind it to new navigation link (“Add
+          car”)
+        </h2>
+        <p>Create car form:</p>
+        <ul class="list-disc list-inside demo-code">
+          <li>Name field is required </li>
+          <li>FirstRegistration field is required </li>
+          <li>Origin field is required and must be of type "GERMANY" or "USA"</li>
+          <li>Save button must be active if all fields are valid</li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>6.) Consume POST endpoint to create new car.</h2>
+      </li>
+
+      <li>
+        <h2>7.) Create CarDetailsComponent to show car information. For navigation must be used our “Details” button
+          from car card.</h2>
+      </li>
+
+      <li>
+        <h2>8.) Consume DELETE endpoint to remove car from “Cars” page at click on “Delete” button of car card. </h2>
+      </li>
+    </ul>
+    <h2 class="text-primary-1 text-24">Already finished? Try next bonus steps!</h2>
+    <ul class="flex flex-col gap-4">
+      <li><h2>1.) Write the unit test of your choice.</h2></li>
+      <li><h2>2.) Write an interceptor and display in console tab every request.</h2></li>
+      <li><h2>3.) Try to render car details page only after receiving data from API (use angular Resolve interface). Resolve interface helps us to wait data, that should be resolved before route is finally activated</h2></li>
+      <li><h2>4.) Style your website.</h2></li>
+      <li><h2>5.) Consume GET filter endpoint to filter our cars on “Cars” page.</h2></li>
+      <li><h2>6.) You are unreal! Take a coffee =)</h2></li>
+    </ul>
+  </ul>
+</div>
