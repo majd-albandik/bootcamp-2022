@@ -1,3 +1,4 @@
+import { CarService } from '@/app/services/car.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,6 @@ export class WelcomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
