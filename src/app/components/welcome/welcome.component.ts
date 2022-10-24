@@ -1,15 +1,14 @@
-import { CarService } from '@/app/services/car.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent implements OnInit {
+  name = 'Majd'; //Change this with your name :)
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
-
 }
