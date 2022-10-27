@@ -3,7 +3,7 @@
 
 -   ## 1.) Get your Starter Kit
     
-    Clone the starter kit from github. Use your preferred command line with the command `git clone https://github.com/majd-albandik/Angular-bootcamp.git`
+    Clone the starter kit from github. Use your preferred command line with the command `git clone https://github.com/majd-albandik/bootcamp-2022.git`
     
 -   ## 2.) Start the project
     
