@@ -1,1 +1,20 @@
-<p>car-details works!</p>
+<div class="container" *ngIf="car">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="header-text">Car details</h1>
+    </div>
+  </div>
+  <div class="row">
+    <ul>
+      <li>Car model: {{car.model}}</li>
+      <li>Description: {{car.description}}</li>
+      <li>Origin: {{car.origin}}</li>
+      <li>Km/gallon: {{car.carDetails.kmPerGallon}}</li>
+      <li>Cylinders: {{car.carDetails.cylinders}}</li>
+      <li>Displacement: {{car.carDetails.Displacement}}</li>
+      <li>Horse power: {{car.carDetails.horsepower}}</li>
+      <li>Weight: {{car.carDetails.weight}}</li>
+      <li>Acceleration: {{car.carDetails.acceleration}}</li>
+      </ul>
+  </div>
+</div>

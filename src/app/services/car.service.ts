@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
 import { Observable, take } from 'rxjs';
 import { Car } from '../models/car.vo';
 
-const API_FILTER_URL: string = "http://localhost:3000/car/car?q=searchTerm";
+// const API_FILTER_URL: string = "http://localhost:3000/car/car?q=searchTerm";
+const BASE_API_URL: string = "http://localhost:3000"
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,5 +17,10 @@ export class CarService {
   public getCars(): Observable<Car[]> {
     return this.httpClient.get<Car[]>(`${environment.baseApiUrl}/car`);
   }
+
+  getCarDetails(carId: number): Observable<Car> {
+    return this.httpClient.get<Car>(BASE_API_URL+'/car/'+carId);
+}
+
 }
 

@@ -19,9 +19,11 @@ const routes: Routes = [
   },
   {
     path: 'cars',
+    pathMatch: 'full',
     component: CarsComponent,
   },
-  { path: 'car-details',
+  { path: 'car-details/:id',
+  pathMatch: 'full',
   component: CarDetailsComponent },
 ];
 

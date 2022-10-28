@@ -9,7 +9,7 @@
   <div class="row">
     <button class="delete">Delete</button>
   </div>
-  <div class="row">
-    <button class="details" [routerLink]="['/car-details']">Details</button>
+  <div class="row" *ngIf="car">
+<button class="details" [routerLink]="['/car-details/', car.id]">Details</button>
   </div>
 </div>
