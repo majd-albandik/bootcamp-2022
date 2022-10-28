@@ -1,5 +1,5 @@
 
-        <div class="container-fluid text-center">
+        <div class="text-center container-fluid">
 
             <div> 
                 <h1>Cars</h1>
@@ -13,7 +13,7 @@
                     >
             </div>
 
-            <div class="main text-center">
+            <div class="main text-center" style="margin-top:450px;">
                 <div class="main-box">
                     <div *ngFor="let car of carService.cars | filter: carService.query" >
                         <app-car-item [car]="car" [model]="car.model" [firstRegistration]="car.firstRegistration"></app-car-item>

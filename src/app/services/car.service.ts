@@ -2,7 +2,7 @@
 import { environment } from '@/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, take } from 'rxjs';
+import { Observable, Subject, take } from 'rxjs';
 import { Car } from '../models/car.vo';
 
 @Injectable({
@@ -12,10 +12,12 @@ export class CarService {
 
   cars: Car[] = [];
   selectedCar?: Car;
-  
+
   //for filtering:
   query: any;
   id!:number;
+
+  public carsUpdated:Subject<boolean> = new Subject<boolean>()
 
   constructor(private httpClient: HttpClient) {}
 
@@ -35,8 +37,13 @@ export class CarService {
     this.httpClient.delete<Car[]>(`${environment.baseApiUrl}/car`)
   }
 
-  public postCar(){
-    this.httpClient.post<Car[]>(`${environment.baseApiUrl}/car`, this.cars)
+  // public postCar(){
+  //   this.httpClient.post<Car[]>(`${environment.baseApiUrl}/car`, this.cars)
+  // }
+
+  public postCar(car: Car): Observable<Car>{
+    return this.httpClient.post<Car>(`${environment.baseApiUrl}/car`, car );
   }
+
 
 }

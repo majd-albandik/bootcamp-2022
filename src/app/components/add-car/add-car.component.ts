@@ -15,14 +15,6 @@ export class AddCarComponent implements OnInit {
 
   form: FormGroup;
   
-  newCar = {
-    id: 1,
-    model: "",
-    firstRegistration: "",
-    origin: "GERMANY",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-   
-  }
 
   constructor(public carService: CarService, private router: Router, private fb: FormBuilder, private http: HttpClient){
     this.form = fb.group({
@@ -52,16 +44,21 @@ export class AddCarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    // this.carService.postCar().subscribe(()=>{
-      // this.router.navigate(['cars']);
-    // })
 
-    this.http.post<Car[]>(`${environment.baseApiUrl}/car`, this.newCar)
-    .subscribe(()=>{
-      this.router.navigate(['cars']);
-      console.log('subscribe is working')
-    })
+  onSubmit(){
+    const car: Car = this.form.value as Car 
+    this.carService.postCar(car).subscribe({
+      next: (car: Car) => {
+        console.log('car saved');
+      },
+      error: (err: any) => {console.log(err)},
+      complete: () => {
+        this.carService.carsUpdated.next(true); //subject - lista változássról, küldő fél
+        // this.onUpdateUser.emit(); sibling komm. miatt
+        this.form.reset();
+        this.router.navigate(['cars']);
+      },
+    });
   }
 
 
