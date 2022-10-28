@@ -1,0 +1,19 @@
+.card-img {
+  object-fit: contain;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.delete {
+  background-color: red;
+  border: 3px solid rgb(142, 37, 37);
+
+}
+
+.details {
+  background-color: blue;
+  border: 3px solid rgb(72, 72, 193);
+  margin-top: 2px;
+}

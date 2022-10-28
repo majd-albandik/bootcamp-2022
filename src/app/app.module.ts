@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ExerciseComponent } from './components/exercise/exercise.component';
+import { CarsComponent } from './components/cars/cars.component';
+import { CarCardComponent } from './components/car-card/car-card.component';
+import { CarDetailsComponent } from './components/car-details/car-details.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, WelcomeComponent, ExerciseComponent],
+  declarations: [AppComponent, NavbarComponent, WelcomeComponent, ExerciseComponent, CarsComponent, CarCardComponent, CarDetailsComponent,],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,15 @@
+
+<div class="card-img">
+  <img src="../../../assets/car-dummy-2.jpg" alt="Car photo" />
+</div>
+<div class="card-content">
+  <div class="car-title">Model: {{ car?.model }}</div>
+  <div class="car-firstReg">First registration: {{ car?.firstRegistration }}</div>
+  <div class="car-origin">Car origin: {{ car?.origin }}</div>
+  <div class="row">
+    <button class="delete">Delete</button>
+  </div>
+  <div class="row">
+    <button class="details" [routerLink]="['/car-details']">Details</button>
+  </div>
+</div>
