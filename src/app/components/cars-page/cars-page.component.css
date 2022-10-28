@@ -1,0 +1,36 @@
+.main {
+
+    position: absolute;
+    width: 958px;
+    height: 1481px;
+    left: 410px;
+    top: 60px;
+    border-radius: 0px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+
+
+    margin-top: 280px;
+
+
+}
+
+.main-box {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:24px
+
+}
+
+input {
+    border:none;
+    width:350px;
+    height: 40px;
+    padding: 5px;
+}

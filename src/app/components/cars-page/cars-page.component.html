@@ -1,0 +1,24 @@
+
+        <div class="container-fluid text-center">
+
+            <div> 
+                <h1>Cars</h1>
+            </div>
+
+            <div class="inputfield">
+                <input type="text"
+                    placeholder="Search..."
+                    name="searchFilter"
+                    [(ngModel)]="carService.query"
+                    >
+            </div>
+
+            <div class="main text-center">
+                <div class="main-box">
+                    <div *ngFor="let car of carService.cars | filter: carService.query" >
+                        <app-car-item [car]="car" [model]="car.model" [firstRegistration]="car.firstRegistration"></app-car-item>
+                    </div>
+                </div>
+            </div>
+        </div>
+

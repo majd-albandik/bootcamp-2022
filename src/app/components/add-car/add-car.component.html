@@ -1,0 +1,65 @@
+<h4>Add new car</h4>
+
+<form [formGroup]="form"  (ngSubmit)="onSubmit()" class="col-xs-6">
+    <div class="mb-3 text-center">
+        <label class="form-label col-xs-3" 
+                for="model"></label>
+        <input 
+            class="form-control col-xs-3" 
+            placeholder="model" 
+            type="text" 
+                id="model" 
+                name="model" 
+                formControlName="model"
+                [class.error]="model.touched && model.invalid"
+                >
+                <p *ngIf="model.touched && model.invalid" class="error">This field is required!</p>
+    </div>
+
+    <div class="mb-3 text-center">
+        <label class="form-label col-xs-3" 
+                for="firstRegistration"></label>
+        <input 
+            class="form-control col-xs-3" 
+            placeholder="first Registration's Date" 
+            type="text" 
+                id="firstRegistration" 
+                name="firstRegistration" 
+                formControlName="firstRegistration" 
+              
+                >
+                <!-- <p *ngIf="firstRegistration.touched && firstRegistration.hasError('required')" class="error">This field is required!</p> -->
+    </div>
+
+    <div class="mb-3 text-center">
+        <label class="form-label col-xs-3" 
+                for="origin"></label>
+        <input 
+            class="form-control col-xs-3" 
+            placeholder="origin" 
+            type="text" 
+                id="origin" 
+                name="origin" 
+                formControlName="origin"
+                
+                >
+                <!-- <p *ngIf="origin.touched && origin.invalid" class="error">This field is required!</p> -->
+    </div>
+
+    <div class="mb-3 text-center">
+        <label class="form-label col-xs-3" 
+                for="description"></label>
+        <textarea
+            class="form-control col-xs-3" 
+            placeholder="description" 
+            type="text" 
+                id="description" 
+                name="description" 
+                formControlName="description" 
+                >
+            </textarea>
+    </div>
+
+    <button type="submit" class="btn btn-info" [disabled]="form.invalid"> Add new car</button>
+    
+</form>

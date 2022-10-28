@@ -1,0 +1,14 @@
+
+<div class="container-fluid main-box my-3">
+    <div class="img-box" >
+        <img src="../../../assets/car-dummy-2.jpg" alt="car-image">
+    </div>
+    <h4> {{ model | filter: carService.query }} </h4>
+    <p> {{ firstRegistration | filter: carService.query }} </p>
+    <button class="btn btn-outline-danger m-2" (click)="deleteCar()"> Delete </button>
+
+    </div>
+    <!-- (click)="details(car!)" -->
+
+
+
