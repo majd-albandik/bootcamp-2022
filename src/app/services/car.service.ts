@@ -18,12 +18,12 @@ export class CarService {
     return this.httpClient.get<Car[]>(`${environment.baseApiUrl}/car`);
   }
 
-  public addCar(car: Car) {
-    this.httpClient.post<Car>(`${environment.baseApiUrl}/car`, car);
+  public addCar(car: Car): Observable<Car> {
+    return this.httpClient.post<Car>(`${environment.baseApiUrl}/car`, car);
   }
 
-  public deleteCar (id: number) {
-    this.httpClient.delete<any>(`${environment.baseApiUrl}/car/${id}`);
+  public deleteCar (id: number): Observable<Car> {
+    return this.httpClient.delete<any>(`${environment.baseApiUrl}/car/${id}`);
   }
 
 }
