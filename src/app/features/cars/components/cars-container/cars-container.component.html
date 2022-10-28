@@ -1,0 +1,8 @@
+<div>
+  <div class="counter">
+    <p>{{ cars.length }} cars were found</p>
+  </div>
+  <section class="card-container">
+    <app-card (handleDelete)="handleCarDelete.emit($event)" [car]="car" *ngFor="let car of cars"></app-card>
+  </section>
+</div>

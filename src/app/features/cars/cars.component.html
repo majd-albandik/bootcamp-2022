@@ -1,0 +1,9 @@
+<div>
+  <section class="filter-container">
+    <input placeholder="Search / Filter Cars" [formControl]="searchbar" type="text" />
+  </section>
+  <ng-container *ngIf="cars$ | async as cars; else elseBlock">
+    <app-cars-container (handleCarDelete)="onDeleteCar($event)" [cars]="cars ?? []"></app-cars-container>
+  </ng-container>
+  <ng-template #elseBlock> <app-loading></app-loading> </ng-template>
+</div>

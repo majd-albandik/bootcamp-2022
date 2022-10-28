@@ -1,0 +1,34 @@
+<div>
+  <form (ngSubmit)="handleCarFormSubmit()" [formGroup]="createCarForm">
+    <div class="input-container">
+      <label for="">Model</label>
+      <input [class.error]="model.invalid && model.touched" type="text" [formControl]="model" />
+      <div *ngIf="model.invalid && model.touched" class="error-container">
+        <p *ngIf="model.hasError('required')">This field is required</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="">First Registration</label>
+      <input
+        [class.error]="firstRegistration.invalid && firstRegistration.touched"
+        type="text"
+        [formControl]="firstRegistration"
+      />
+      <div *ngIf="firstRegistration.invalid && firstRegistration.touched" class="error-container">
+        <p *ngIf="firstRegistration.hasError('required')">This field is required</p>
+      </div>
+    </div>
+    <div class="input-container">
+      <label for="">Origin Field</label>
+      <input [class.error]="originField.invalid && originField.touched" type="text" [formControl]="originField" />
+      <div *ngIf="originField.invalid && originField.touched" class="error-container">
+        <p *ngIf="originField.hasError('required')">This field is required</p>
+        <p *ngIf="originField.hasError('notCorrectOrigin')">Not Correct Form of Origin</p>
+      </div>
+    </div>
+    <div class="button-container">
+      <!-- -->
+      <button [disabled]="createCarForm.invalid" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

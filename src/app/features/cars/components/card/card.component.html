@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="image-container">
+    <img [src]="car.image" alt="image-of-the-car" />
+  </div>
+  <div class="title-container">
+    <strong>{{ car.model }}</strong>
+    <p>{{ car.firstRegistration }}</p>
+  </div>
+  <div class="content-container">
+    <p>{{ car.origin }}</p>
+    <p>{{ car.description | slice: 0:150 }}</p>
+    <div class="details" *ngIf="car.carDetails">
+      <p>
+        <strong>
+          {{ car.carDetails.horsepower }}
+        </strong>
+        hp
+      </p>
+      <p>
+        <strong> {{ car.carDetails.weight }} </strong>Kg
+      </p>
+    </div>
+  </div>
+  <div class="actions-container">
+    <a class="detailButton" [routerLink]="['/cars', car.id]">Details</a>
+    <button (click)="handleDelete.emit(car.id)" class="deleteButton">Delete</button>
+  </div>
+</div>

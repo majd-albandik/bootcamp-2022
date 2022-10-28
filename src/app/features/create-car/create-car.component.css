@@ -1,0 +1,48 @@
+.input-container{
+    padding: 8px;
+    margin: 8px 0;
+    width: 100%;
+    display: grid;
+    
+}
+label{
+    padding: 8px;
+
+}
+input{
+    padding: 8px;
+    color: black;
+    border: 1px solid transparent;
+}
+.error-container{
+    color: red;
+    width: 100%;
+    padding: 8px;
+}
+form{
+    max-width: 500px;
+    width: 100%;
+    padding: 8px;
+    margin: auto;
+}
+.button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+button{
+    background-color: rgb(99, 211, 99);
+    padding: 8px 16px;
+    color: white;
+    border-radius: 4px;
+}
+button:disabled{
+    background-color: rgb(134, 163, 126);
+}
+
+.error{
+    color: rgb(241, 76, 76);
+    border: 1px solid rgb(241, 76, 76);;
+}

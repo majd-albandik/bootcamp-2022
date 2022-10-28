@@ -180,21 +180,6 @@
       }
     },
     {
-      "id": 13,
-      "model": "Renault Megane",
-      "firstRegistration": "1970-01-01",
-      "origin": "FRANCE",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "carDetails": {
-        "kmPerGallon": 15,
-        "cylinders": 8,
-        "Displacement": 350,
-        "horsepower": 145,
-        "weight": 4440,
-        "acceleration": 7
-      }
-    },
-    {
       "id": 14,
       "model": "Toyota Auris",
       "firstRegistration": "1970-01-01",
@@ -223,6 +208,18 @@
         "weight": 4440,
         "acceleration": 12
       }
+    },
+    {
+      "firstRegistration": "02/02/1998",
+      "model": "Toyota Corolla",
+      "origin": "JAPAN",
+      "id": 16
+    },
+    {
+      "firstRegistration": "05/05/1995",
+      "model": "Honda Civic",
+      "origin": "JAPAN",
+      "id": 17
     }
   ]
 }

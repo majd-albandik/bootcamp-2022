@@ -1,0 +1,25 @@
+.data-container{
+    padding: 16px;
+
+}
+img{
+    height: 150px;
+}
+.deleteButton{
+    background-color: rgb(255, 72, 72);
+    color: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+}
+.deleteButton:hover{
+    background-color: red;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.445);
+
+}
+.page{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

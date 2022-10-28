@@ -1,0 +1,39 @@
+<div class="page" *ngIf="car$ | async as car; else elseBlock">
+  <div class="data-container" *ngIf="car.id">
+    <p>
+      <strong> id: </strong>
+      {{ car.id }}
+    </p>
+  </div>
+  <div class="data-container" *ngIf="car.model">
+    <p>
+      <strong> model: </strong>
+      {{ car.model }}
+    </p>
+  </div>
+  <div class="data-container" *ngIf="car.firstRegistration">
+    <p>
+      <strong> First Registration: </strong>
+      {{ car.firstRegistration }}
+    </p>
+  </div>
+  <div class="data-container" *ngIf="car.origin">
+    <p>
+      <strong> origin: </strong>
+      {{ car.origin }}
+    </p>
+  </div>
+  <div class="data-container" *ngIf="car.description">
+    <p>
+      <strong> description: </strong>
+      {{ car.description }}
+    </p>
+  </div>
+  <div class="data-container" *ngIf="car.image">
+    <img [src]="car.image" alt="" />
+  </div>
+  <div class="data-container" *ngIf="car.image">
+    <button class="deleteButton" (click)="onDeleteCar(car.id!)">Delete</button>
+  </div>
+</div>
+<ng-template #elseBlock> <app-loading></app-loading> </ng-template>

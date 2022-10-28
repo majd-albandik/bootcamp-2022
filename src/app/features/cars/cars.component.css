@@ -1,0 +1,14 @@
+.filter-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    
+}
+input{
+    padding:  8px 16px;
+    min-width: 300px;
+    max-width: 450px;
+    width: 100%;
+}
