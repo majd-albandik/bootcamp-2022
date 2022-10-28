@@ -9,10 +9,12 @@ import { ExerciseComponent } from './components/exercise/exercise.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { CarCardComponent } from './components/car-card/car-card.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { AddCarComponent } from './components/add-car/add-car.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, WelcomeComponent, ExerciseComponent, CarsComponent, CarCardComponent, CarDetailsComponent,],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, NavbarComponent, WelcomeComponent, ExerciseComponent, CarsComponent, CarCardComponent, CarDetailsComponent, AddCarComponent,],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -22,5 +22,14 @@ export class CarService {
     return this.httpClient.get<Car>(BASE_API_URL+'/car/'+carId);
 }
 
+
+
+// public deleteCarById(){
+//   return this.httpClient.delete<Car>(`${environment.baseApiUrl}/car` + this.id);
+// }
+
+public deleteAllCars(){
+  this.httpClient.delete<Car[]>(`${environment.baseApiUrl}/car`)
+}
 }
 

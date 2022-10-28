@@ -1,0 +1,35 @@
+<h3>Add car</h3>
+<form [formGroup]="form" class="col-xs-6">
+  <div class="mb-3 text-center">
+    <label class="form-label col-xs-3" for="model"></label>
+    <input
+      class="form-control col-xs-3"
+      placeholder="model"
+      type="text"
+      name="model"
+      formControlName="model"
+      [class.error]="model.touched && model.invalid"
+    />
+    <p *ngIf="model.touched && model.invalid" class="error">Field is required!</p>
+  </div>
+
+  <div class="mb-3 text-center">
+    <label class="form-label col-xs-3" for="firstRegistration"></label>
+    <input
+      class="form-control col-xs-3"
+      placeholder="first Registration's Date"
+      type="text"
+      name="firstRegistration"
+      formControlName="firstRegistration"
+    />
+  </div>
+
+  <div class="mb-3 text-center">
+    <label class="form-label col-xs-3" for="origin"></label>
+    <input class="form-control col-xs-3" placeholder="origin" type="text" name="origin" formControlName="origin" />
+    <div class="row">
+
+      <button type="submit" class="btn btn-info">Add car</button>
+    </div>
+  </div>
+</form>

@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarsComponent } from './components/cars/cars.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
+import { AddCarComponent } from './components/add-car/add-car.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
@@ -22,9 +23,9 @@ const routes: Routes = [
     pathMatch: 'full',
     component: CarsComponent,
   },
-  { path: 'car-details/:id',
-  pathMatch: 'full',
-  component: CarDetailsComponent },
+  { path: 'car-details/:id', pathMatch: 'full', component: CarDetailsComponent },
+
+  { path: 'add-car', pathMatch: 'full', component: AddCarComponent },
 ];
 
 @NgModule({
