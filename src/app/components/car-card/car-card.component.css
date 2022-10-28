@@ -1,0 +1,38 @@
+.card-container {
+  width: 260px;
+  height: 340px;
+  border: 1px solid grey;
+}
+
+.card-image-container {
+  width: 100%;
+  height: 45%;
+}
+
+.card-content-container {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+.card-title {
+  width: 100%;
+  height: 20%;
+}
+
+.card-content {
+  width: 100%;
+  height: 60%;
+}
+
+.card-actions {
+  width: 100%;
+  height: 20%;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+}
