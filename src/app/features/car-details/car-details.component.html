@@ -32,6 +32,14 @@
   <div class="data-container" *ngIf="car.image">
     <img [src]="car.image" alt="" />
   </div>
+  <div *ngIf="car.carDetails as details">
+    <p>{{ details.kmPerGallon }} km/gallon</p>
+    <p>{{ details.cylinders }} cylinders</p>
+    <p>{{ details.Displacement }} Displacement</p>
+    <p>{{ details.horsepower }} HP</p>
+    <p>{{ details.weight }} kg</p>
+    <p>{{ details.acceleration }} acceleration</p>
+  </div>
   <div class="data-container" *ngIf="car.image">
     <button class="deleteButton" (click)="onDeleteCar(car.id!)">Delete</button>
   </div>

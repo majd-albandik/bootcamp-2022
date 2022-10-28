@@ -208,18 +208,6 @@
         "weight": 4440,
         "acceleration": 12
       }
-    },
-    {
-      "firstRegistration": "02/02/1998",
-      "model": "Toyota Corolla",
-      "origin": "JAPAN",
-      "id": 16
-    },
-    {
-      "firstRegistration": "05/05/1995",
-      "model": "Honda Civic",
-      "origin": "JAPAN",
-      "id": 17
     }
   ]
 }

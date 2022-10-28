@@ -20,7 +20,6 @@ export class CarService {
   public addImageToCar(car: Car): Car {
     let images: string[] = ['assets/car-dummy-0.jpg', 'assets/car-dummy-1.jpg', 'assets/car-dummy-2.jpg'];
     car.image = images[car.id! % images.length];
-
     return car;
   }
   public getCars$(): Observable<Car[]> {
