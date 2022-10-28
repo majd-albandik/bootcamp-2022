@@ -4,15 +4,21 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-car-card',
   templateUrl: './car-card.component.html',
-  styleUrls: ['./car-card.component.css']
+  styleUrls: ['./car-card.component.css'],
 })
 export class CarCardComponent implements OnInit {
-
   @Input() car?: Car;
+  images: string[] = [
+    '../../../assets/car-dummy-0.jpg',
+    '../../../assets/car-dummy-1.jpg',
+    '../../../assets/car-dummy-2.jpg',
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  getRandomPhotoUrl(): string {
+    return this.images[Math.floor(Math.random() * this.images.length)];
   }
-
 }

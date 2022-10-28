@@ -9,10 +9,13 @@ import { ExerciseComponent } from './components/exercise/exercise.component';
 import { CommonModule } from '@angular/common';
 import { CarsComponent } from './components/cars/cars.component';
 import { CarCardComponent } from './components/car-card/car-card.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CarFormComponent } from './components/car-form/car-form.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, WelcomeComponent, ExerciseComponent, CarsComponent, CarCardComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule],
+  declarations: [AppComponent, NavbarComponent, WelcomeComponent, ExerciseComponent, CarsComponent, CarCardComponent, CarFormComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

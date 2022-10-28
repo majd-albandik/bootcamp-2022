@@ -1,7 +1,7 @@
 import { environment } from '@/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, take } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Car } from '../models/car.vo';
 
 @Injectable({
@@ -11,12 +11,19 @@ export class CarService {
 
   constructor(private httpClient: HttpClient) {}
 
-  /* public getCars() {
-    this.httpClient.get<any>(`${environment.baseApiUrl}/car`).pipe(take(1)).subscribe(data => console.log(data));
-  } */
-
-  public getCars(): Observable<Car[]> {
+  public getCars(searchFilter?: string): Observable<Car[]> {
+    if (searchFilter) {
+      return this.httpClient.get<Car[]>(`${environment.baseApiUrl}/car?q=${searchFilter}`);
+    }
     return this.httpClient.get<Car[]>(`${environment.baseApiUrl}/car`);
+  }
+
+  public addCar(car: Car) {
+    this.httpClient.post<Car>(`${environment.baseApiUrl}/car`, car);
+  }
+
+  public deleteCar (id: number) {
+    this.httpClient.delete<any>(`${environment.baseApiUrl}/car/${id}`);
   }
 
 }

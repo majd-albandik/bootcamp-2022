@@ -1,10 +1,18 @@
 <div class="card-container">
   <div class="card-image-container">
-    <img src="../../../assets/car-dummy-0.jpg" alt="Photo of car">
+    <img [src]="getRandomPhotoUrl()" alt="Photo of car">
   </div>
   <div class="card-content-container">
-    <div class="card-title">{{ car?.model }}</div>
-    <div class="card-content">hello</div>
-    <div class="card-actions">hello</div>
+    <div class="card-info-section card-title">{{ car?.model }}</div>
+    <div class="card-info-section card-content">
+      <p>Origin: {{ car?.origin }}</p>
+      <p>Horsepower: {{ car?.carDetails?.horsepower }}</p>
+      <p>Weight: {{ car?.carDetails?.weight }}</p>
+      <p>Acceleration: {{ car?.carDetails?.acceleration }}</p>
+    </div>
+    <div class="card-info-section card-actions">
+      <button>Details</button>
+      <button>Delete</button>
+    </div>
   </div>
 </div>

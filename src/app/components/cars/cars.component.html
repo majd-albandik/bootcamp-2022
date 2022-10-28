@@ -1,4 +1,8 @@
 <div>
+  <div class="input-container">
+    <input type="text" (keyup)="onSearchInputChanged()" [(ngModel)]="inputValue">
+    <p class="carsNumber" *ngIf="cars$ | async as cars">{{ cars.length }} Cars were found</p>
+  </div>
   <div *ngIf="cars$ | async as cars" class="cars-container">
     <ng-container *ngFor="let car of cars">
       <app-car-card [car]="car"></app-car-card>
