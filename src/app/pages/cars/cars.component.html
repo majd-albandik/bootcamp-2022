@@ -1,0 +1,17 @@
+<div class="search-div">
+    <input type="text" placeholder="Search/ Filter Cars" [(ngModel)]="inputValue" (keyup)="getFilteredCars()">
+    
+    <h3 *ngIf="cars.getValue().length !== 0">{{cars.getValue().length}} Cars were found</h3>
+    <h3 *ngIf="cars.getValue().length === 0">There is no result</h3>
+</div>
+
+<div class="spinner" *ngIf="isLoading">
+    <div class="lds-dual-ring"></div>
+</div>
+
+
+<div class="cars-container">
+    <div *ngFor="let car of cars |async">
+        <app-car-card [car]="car"></app-car-card>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="car-container">
+    <div class="img-div">
+        <img [src]="imgSource" alt="car-image">
+    </div>
+    <h1>{{car?.model}}</h1>
+    <div>
+        <h3>First registraion: {{car?.firstRegistration}}</h3>
+        <p>{{car?.description}}</p>
+    </div>
+    <div class="btns-div">
+        <button class="delete-button" type="button" (click)="carService.deleteCar(car!.id)">Delete</button>
+        <button class="details-button" type="button" (click)="navigateToDetails(car!.id)">Details</button>
+    </div>
+</div>

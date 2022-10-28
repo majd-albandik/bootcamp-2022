@@ -1,0 +1,22 @@
+<h1>Add Car</h1>
+<form [formGroup]="carForm" (ngSubmit)="onSave()" >
+    <div class="form-element">
+        <label for="">Model*</label>
+        <input type="text" name="model" id="model" formControlName="model">
+    </div>
+    <p class="invalid" *ngIf="model.touched && model.hasError('required')">
+        Required field
+      </p>
+    <div class="form-element">
+        <label for="">First Registraion</label>
+        <input type="text" name="firstRegistration" id="firstRegistration" formControlName="firstRegistration">
+    </div>
+    <p class="invalid" *ngIf="firstRegistration.touched && firstRegistration.hasError('pattern')">
+        Date format should be: DD/MM/YYYY
+      </p>
+    <div class="form-element">
+        <label for="">Origin</label>
+        <input type="text" name="origin" id="origin" formControlName="origin">
+    </div>
+    <button [disabled]="carForm.invalid" type="submit">Add car</button>
+</form>

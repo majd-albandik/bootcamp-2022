@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    margin: 30px auto;
+}
+form {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+}
+
+input {
+    border-radius: 5px;
+    margin: 4px 0;
+}
+
+button {
+    margin-top: 16px;
+    background-color: rgb(77, 162, 227);
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+button:disabled {
+    background-color: grey;
+}
+
+.invalid {
+    color: red;
+    font-size: 0.7rem;
+    margin: 4px 0;
+}
