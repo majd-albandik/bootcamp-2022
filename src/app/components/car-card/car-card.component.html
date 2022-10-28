@@ -1,0 +1,16 @@
+<!-- <div class="main-card-container">
+  <div class="image-container"><img src="assets/car-image.jpg" alt="" /></div>
+  <div class="model-container"> Model: {{ model }}</div>
+  <div class="firstregistration-container">First Registration: {{firstRegistration}}</div>
+  <div class="other-detail-container"> Description{{description}}}</div>
+</div> -->
+<div class="main-card-container">
+  <div class="image-container"><img src="assets/car-image.jpg" alt="" /></div>
+
+  Model: {{ model }}
+  <span>First Registration: {{ firstRegistration }}</span>
+  <span>Description{{ description }}}</span>
+
+    <button (click)="toDetails()">Car Details</button>
+    <button (click)="RemoveCar()">Remove Car</button>
+</div>

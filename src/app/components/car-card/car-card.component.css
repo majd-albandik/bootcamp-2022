@@ -1,0 +1,23 @@
+.main-card-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+.image-container{
+  width: 270px;
+  height: 212px;
+  align-self: stretch;
+}
+
+.model-container{
+width: 200px;
+height: 30px;
+}
+
+button {
+  background-color: black;
+  color: white;
+}

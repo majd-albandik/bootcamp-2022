@@ -1,0 +1,12 @@
+.input-field {
+  margin: auto;
+  gap: 5px;
+  padding: 20px;
+  align-items: center;
+}
+
+.save-button {
+  color: white;
+  background-color:blueviolet;
+  margin: auto;
+}

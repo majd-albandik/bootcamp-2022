@@ -1,0 +1,20 @@
+<div class="details-container">
+  <h1>{{ carService.selectedCar!.model}}</h1>
+  <div>
+    <ul>
+      <li>{{ carService.selectedCar!.firstRegistration }}</li>
+      <li>{{ carService.selectedCar!.origin }}</li>
+      <li>{{ carService.selectedCar!.description }}</li>
+    </ul>
+  </div>
+  <h2>Details:</h2>
+  <div>
+    <ul>
+      <li>Kilometers/Gallon: {{ carService.selectedCar!.carDetails.kmPerGallon }}</li>
+      <li>Cylinders: {{ carService.selectedCar!.carDetails.cylinders }}</li>
+      <li>Displacement: {{ carService.selectedCar!.carDetails.Displacement }}</li>
+      <li>Horsepower: {{ carService.selectedCar!.carDetails.horsepower }}</li>
+    </ul>
+  </div>
+</div>
+<button >Delete</button>

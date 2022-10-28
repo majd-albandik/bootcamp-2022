@@ -1,0 +1,16 @@
+<div class="main-container">
+  <form *ngIf="carForm" [formGroup]="carForm">
+    <div class="new-car-container">
+      <div class="input-field" formControlName="model"><input type="text" name="model" /> Enter Car Model</div>
+      <div *ngIf="model.touched && model.errors?.['required']" class="alert alert-danger">Car model is required</div>
+
+      <div class="input-field" formControlName="firstRegistration"><input type="date" name="year" /> Enter produce date</div>
+      <div *ngIf="firstRegistration.touched && firstRegistration.errors?.['required']" class="alert alert-danger"></div>
+
+      <div class="input-field" formControlName="origin"><input type="text" name="origin" />Enter country</div>
+      <div *ngIf="origin.touched && origin.errors?.['required']" class="alert alert-danger">Country is required</div>
+
+      <button class="save-button" type="submit">Save Car!</button>
+    </div>
+  </form>
+</div>
