@@ -28,6 +28,8 @@ export class CreateCarComponent implements OnInit {
 
   ngOnInit(): void {}
   handleCarFormSubmit(): void {
+    /*     console.log(this.originField);
+     */
     let newCar: Car = {
       firstRegistration: this.firstRegistration.value,
       model: this.model.value,

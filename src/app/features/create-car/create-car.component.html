@@ -10,12 +10,14 @@
     <div class="input-container">
       <label for="">First Registration</label>
       <input
+        placeholder="dd/mm/yyyy"
         [class.error]="firstRegistration.invalid && firstRegistration.touched"
         type="text"
         [formControl]="firstRegistration"
       />
       <div *ngIf="firstRegistration.invalid && firstRegistration.touched" class="error-container">
         <p *ngIf="firstRegistration.hasError('required')">This field is required</p>
+        <p *ngIf="firstRegistration.hasError('invalidFormat')">The date format is not suitable</p>
       </div>
     </div>
     <div class="input-container">
