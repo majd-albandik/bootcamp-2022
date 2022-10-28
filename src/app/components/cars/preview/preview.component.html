@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+  <img src="../../../../assets/car-dummy-0.jpg" class="card-img-top" alt="car">
+  <div class="card-body">
+    <h5 class="card-title">{{ currentCar?.model }}</h5>
+    <p class="card-text">{{ currentCar?.firstRegistration }}</p>
+    <p class="card-text">{{ currentCar?.description }}</p>
+    <button class="btn btn-danger" (click)="onDeleteCar(currentCar)">Delete car</button>
+    <a [routerLink]="['/car-details', currentCar?.id]" class="btn btn-primary">Car details</a>
+  </div>
+</div>

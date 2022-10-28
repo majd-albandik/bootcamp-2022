@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid d-flex justify-content-between">
+    <a routerLink="/cars" class="navbar-brand">LOGO</a>
+    <ul class="nav">
+      <li class="nav-item">
+        <a routerLink="/cars" class="nav-link">Cars</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/add-car" class="nav-link">Add new car</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <div class="input-group mb-3" [formGroup]="searchForm" (ngSubmit)="onSearch(searchField.value)">
+    <input #searchField (keydown.enter)="onSearch(searchField.value)" type="text" class="form-control shadow-none"
+      minLength="3" placeholder="Search for a car..." formControlName="searchField">
+    <button class="btn search-btn" type="submit" id="search-btn" (click)="onSearch(searchField.value)">Search</button>
+  </div>
+
+  <div class="car-container row row-cols-4">
+    <div *ngFor="let car of cars$ | async">
+      <app-preview [currentCar]="car"></app-preview>
+    </div>
+  </div>
+</main>

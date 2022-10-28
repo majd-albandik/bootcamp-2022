@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="m-3">
+    <form [formGroup]="carForm" (ngSubmit)="onSaveCar()">
+      <div class="d-flex">
+        <div class="title me-auto p-2">
+          <h5>Add new car</h5>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="modelInput">Model</label>
+          <input id="modelInput" class="form-control" type="text" name="model"
+            formControlName="model" [class.is-invalid]="model.touched && model.invalid" />
+          <p *ngIf="model?.hasError('required')" class="invalid-feedback">
+            Required field!
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="firstRegistrationInput">Date of first registration</label>
+          <input id="firstRegistrationInput" class="form-control" type="text" name="firstRegistration"
+            formControlName="firstRegistration" [class.is-invalid]="firstRegistration.touched && firstRegistration.invalid" />
+          <p *ngIf="firstRegistration?.hasError('required')" class="invalid-feedback">
+            Required field!
+          </p>
+          <p *ngIf="firstRegistration?.hasError('pattern')" class="invalid-feedback">
+            Required date pattern is DD/MM/YYYY!
+          </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="originInput">Origin of car</label>
+          <select id="originInput" class="form-control" type="text" name="origin"
+          formControlName="origin" [class.is-invalid]="origin.touched && origin.invalid">
+          <option value="1">GERMANY</option>
+          <option value="2">USA</option>
+          <option value="3">other</option>
+        </select>
+          <!-- <input id="originInput" class="form-control" type="text" name="origin"
+            formControlName="origin" [class.is-invalid]="origin.touched && origin.invalid" /> -->
+          <p *ngIf="origin?.hasError('required')" class="invalid-feedback">
+            Required field!
+          </p>
+        </div>
+        <div  class="button p-2">
+          <button type="submit" class="btn btn-lg btn-primary" [disabled]="carForm.invalid">Save player</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
