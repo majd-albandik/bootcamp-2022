@@ -1,0 +1,28 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  justify-content: center;
+}
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+.searchbox_h5 {
+  display: flex;
+
+  margin: 20px 0;
+
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  margin: 10px 0;
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+

@@ -1,0 +1,12 @@
+<div class="searchbox_h5">
+  <form [formGroup]="searchbarform">
+    <input formControlName="search" placeholder="Search/Filter Cars" />
+  </form>
+  <h5>{{ (cars$ | async)?.length }}</h5>
+</div>
+<div class="card-container">
+  <ng-container *ngFor="let item of cars$ | async">
+    <app-card [object]="item" [image_url]="'./assets/car-dummy-0.jpg'" [title]="item.model" [description]="item.description">
+    </app-card>
+  </ng-container>
+</div>

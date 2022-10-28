@@ -1,0 +1,12 @@
+<form [formGroup]="addCarForm" (ngSubmit)="addCar()">
+  <input formControlName="model" placeholder="Model name" />
+  <small *ngIf="modelControl.invalid && modelControl.touched">Model name cannot be empty!</small>
+
+  <input type="date" formControlName="firstRegistration" />
+  <small *ngIf="firstRegistrationControl.invalid && firstRegistrationControl.touched">Date must not be empty!</small>
+
+  <input formControlName="origin" placeholder="Origin (eg.:USA or GERMANY etc.)" />
+  <small *ngIf="originControl.invalid && originControl.touched">Origin name must be all uppercase and be atleast 3 characters long!</small>
+
+  <button type="submit" [disabled]="addCarForm.invalid">Save</button>
+</form>

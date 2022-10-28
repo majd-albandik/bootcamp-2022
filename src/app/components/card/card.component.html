@@ -1,0 +1,9 @@
+<div class="card">
+  <img src="{{ image_url }}" alt="asd" *ngIf="!noImage" />
+  <p>{{ title }}</p>
+  <span>{{ description }}</span>
+  <div class="button_group">
+    <button (click)="navigateToDetails()">Details</button>
+    <button (click)="RemoveItem()">Remove</button>
+  </div>
+</div>
