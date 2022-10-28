@@ -1,6 +1,7 @@
 import { CarService } from '@/app/services/car.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-car',
@@ -10,7 +11,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 export class AddCarComponent implements OnInit {
   addCarForm: FormGroup;
 
-  constructor(fb: FormBuilder, private carService: CarService) {
+  constructor(fb: FormBuilder, private carService: CarService, private router: Router) {
     this.addCarForm = fb.group({
       model: ['', [Validators.required]],
       firstRegistration: ['', [Validators.required]],
@@ -51,6 +52,7 @@ export class AddCarComponent implements OnInit {
     setTimeout(() => {
       this.carService.AddCar(car).subscribe((data) => {
         console.log(data);
+        this.router.navigate(['Cars']);
       });
     }, 500);
   }
