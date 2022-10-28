@@ -1,0 +1,7 @@
+<p>FORM COMES HERE!</p>
+<app-cars-form></app-cars-form>
+<ng-container *ngFor="let car of carService.cars$ | async">
+  <div class="car-cards">
+    <app-cars-card [car]="car"></app-cars-card>
+  </div>
+</ng-container>

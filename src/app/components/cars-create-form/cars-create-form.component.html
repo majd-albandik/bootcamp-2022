@@ -1,0 +1,46 @@
+<div class="add-car-form-container">
+  <form [formGroup]="addCarForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label class="form-label" for="model">Model</label>
+      <input
+        class="form-control"
+        id="model"
+        type="text"
+        name="model"
+        formControlName="model"
+        [class.is-invalid]="
+        addCarForm.get('model')?.touched && addCarForm.get('model')?.hasError('invalid model')
+      "
+      />
+    </div>
+
+    <div>
+      <label class="form-label" for="firstRegistration">First Registration</label>
+      <input
+        class="form-control"
+        id="firstRegistration"
+        type="text"
+        name="firstRegistration"
+        placeholder="(DD/MM/YY or DD/MM/YYYY)"
+        formControlName="firstRegistration"
+      />
+
+      <p *ngIf="addCarForm.invalid && addCarForm.hasError('pattern')">
+        Invalid Date!
+    </p>
+    </div>
+
+    <div>
+      <label class="form-label" for="origin">Origin</label>
+      <input
+        class="form-control"
+        id="origin"
+        type="text"
+        name="origin"
+        formControlName="origin"
+      />
+    </div>
+
+    <button type="submit" class="create-car-btn">Submit</button>
+  </form>
+</div>
