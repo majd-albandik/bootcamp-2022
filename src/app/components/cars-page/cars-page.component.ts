@@ -13,6 +13,7 @@ export class CarsPageComponent implements OnInit {
     
     this.carService.getCars().subscribe((cars: Car[])=> {
       this.carService.cars = cars as Car[];
+      console.log('get cars method is working')
     })
    }
 

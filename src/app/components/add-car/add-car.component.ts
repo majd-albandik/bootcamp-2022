@@ -60,6 +60,7 @@ export class AddCarComponent implements OnInit {
     this.http.post<Car[]>(`${environment.baseApiUrl}/car`, this.newCar)
     .subscribe(()=>{
       this.router.navigate(['cars']);
+      console.log('subscribe is working')
     })
   }
 

@@ -12,6 +12,8 @@ export class CarService {
 
   cars: Car[] = [];
   selectedCar?: Car;
+  
+  //for filtering:
   query: any;
   id!:number;
 
