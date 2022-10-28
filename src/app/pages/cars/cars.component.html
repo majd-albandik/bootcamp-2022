@@ -12,6 +12,6 @@
 
 <div class="cars-container">
     <div *ngFor="let car of cars |async">
-        <app-car-card [car]="car"></app-car-card>
+        <app-car-card [car]="car" (deleteEvent)="onDelete()"></app-car-card>
     </div>
 </div>

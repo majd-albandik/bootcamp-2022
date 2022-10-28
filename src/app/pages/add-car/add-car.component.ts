@@ -37,8 +37,10 @@ export class AddCarComponent implements OnInit {
   onSave(): void {
     if(this.carForm.valid) {
       let car: Car = this.carForm.value
-      this.carsService.addCar(car)
-      this.router.navigate(['/cars'])
+      this.carsService.addCar(car).subscribe(data => {
+        console.log(data)
+        this.router.navigate(['/cars'])
+      })
     }
   }
 

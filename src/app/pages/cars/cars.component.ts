@@ -43,4 +43,20 @@ export class CarsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subs?.unsubscribe()
   }
+
+  onDelete() {
+    this.route.queryParams.pipe(
+      switchMap((params: Params) => {
+        return this.carService.getCars(params)
+      }),
+      tap(cars =>{
+        this.isLoading = true;
+        setTimeout(() => {
+          this.cars.next(cars);
+          this.isLoading = false;
+        }, 500) 
+      } 
+        )
+    ).subscribe()
+  }
 }

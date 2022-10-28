@@ -1,7 +1,7 @@
 import { Car } from '@/app/models/car.vo';
 import { CarService } from '@/app/services/car.service';
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-car-card',
@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
 })
 export class CarCardComponent implements OnInit {
 
-  @Input() car?: Car
-  imgSource: string = ''
+  @Input() car?: Car;
+  imgSource: string = '';
+  @Output() deleteEvent: EventEmitter<void> = new EventEmitter<void>() 
 
-  constructor(public carService: CarService, private router: Router) { }
+  constructor(public carService: CarService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     let imgNumber = Math.floor(Math.random() * 3)
@@ -22,6 +23,14 @@ export class CarCardComponent implements OnInit {
 
   public navigateToDetails(id: number): void {
     this.router.navigate([`cars/${id}`])
+  }
+
+  public deleteCar(id: number) {
+    this.carService.deleteCar(id).subscribe(data => {
+      console.log(data);
+      this.deleteEvent.emit()
+      
+    })
   }
 
 }
